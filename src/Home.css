@@ -1,0 +1,16 @@
+.cursor {
+  position: absolute;
+  top: 50%; /* Ajusta la posición verticalmente */
+  width: 2px; /* Grosor del cursor */
+  height: 1.2em; /* Altura del cursor */
+  animation: blink-animation 1s step-end infinite; /* Animación de parpadeo */
+}
+
+@keyframes blink-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

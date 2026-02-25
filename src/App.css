@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Aplica el estilo a toda la página */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Permite el desplazamiento */
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none; /* Para Firefox */
+  overflow-y: scroll; /* Asegura el scroll sin scrollbar */
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.animate-blur-custom {
+  background-color: #ecf0f350; /* Color de fondo con transparencia */
+  backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+  /* Si deseas soporte más amplio, también puedes usar lo siguiente */
+  -webkit-backdrop-filter: blur(10px); /* Para navegadores WebKit como Safari */
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: mulish;
+  src: url(../src/fonts/Mulish-VariableFont_wght.ttf);
+}
+
+.mulish{
+  font-family: mulish;
+}
+
+@font-face {
+  font-family: radio_canada;
+  src: url(../src/fonts/RadioCanada-VariableFont_wdth\,wght.ttf);
+}
+
+.radio_canada{
+  font-family: radio_canada;
+}
+
+/* Estilos para ocultar el scrollbar */
+.hide-scrollbar {
+  overflow-y: auto;
+  scrollbar-width: none; /* Para Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Para ocultar el scrollbar en navegadores basados en WebKit (Chrome, Safari, Edge) */
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0px; /* Oculta el scrollbar horizontal */
+  height: 0px; /* Oculta el scrollbar vertical */
+  display: none;
+}
+
+/* Para Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+/* Para Internet Explorer y Edge */
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+}
+
+/* Scrollbar para WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F4EEE3; /* Color del "botón" del scrollbar */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del scrollbar */
+}
