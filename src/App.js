@@ -17,9 +17,6 @@ import Landing from "./views/User/Landing";
 import AboutUs from "./views/User/AboutUs";
 import FrequentQuestions from "./views/User/FrequentQuestions";
 
-import AdminPanelNew from "./views/Admin/AdminPanelNew";
-import { AdminSettingsProvider } from "./contexts/AdminSettingsContext";
-
 import { ToastContainer } from "react-toastify";
 
 // 🎬 Animación de carga de café
@@ -164,16 +161,6 @@ function App() {
         <Route path="/home" element={<Landing />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/questions" element={<FrequentQuestions />} />
-
-        {/* Admin demo */}
-        <Route
-          path="/admin-new"
-          element={
-            <AdminSettingsProvider>
-              <AdminPanelNew />
-            </AdminSettingsProvider>
-          }
-        />
 
         {/* Fallback */}
         <Route path="*" element={<NoProducts />} />
